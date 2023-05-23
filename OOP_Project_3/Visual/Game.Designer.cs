@@ -32,9 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPlay = new System.Windows.Forms.TabPage();
-            this.tabLogs = new System.Windows.Forms.TabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.gridPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tabLogs = new System.Windows.Forms.TabPage();
+            this.tabHumanStats = new System.Windows.Forms.TabPage();
+            this.tabSaveGame = new System.Windows.Forms.TabPage();
+            this.tabLoadGame = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabControl.SuspendLayout();
             this.tabPlay.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +46,9 @@
             // 
             this.tabControl.Controls.Add(this.tabPlay);
             this.tabControl.Controls.Add(this.tabLogs);
+            this.tabControl.Controls.Add(this.tabHumanStats);
+            this.tabControl.Controls.Add(this.tabSaveGame);
+            this.tabControl.Controls.Add(this.tabLoadGame);
             this.tabControl.Depth = 0;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ImageList = this.imageList1;
@@ -67,24 +73,6 @@
             this.tabPlay.Text = "Play the game";
             this.tabPlay.UseVisualStyleBackColor = true;
             // 
-            // tabLogs
-            // 
-            this.tabLogs.ImageKey = "log.png";
-            this.tabLogs.Location = new System.Drawing.Point(4, 39);
-            this.tabLogs.Name = "tabLogs";
-            this.tabLogs.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLogs.Size = new System.Drawing.Size(786, 340);
-            this.tabLogs.TabIndex = 1;
-            this.tabLogs.Text = "View game logs";
-            this.tabLogs.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "game-development.png");
-            this.imageList1.Images.SetKeyName(1, "log.png");
-            // 
             // gridPanel
             // 
             this.gridPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -100,6 +88,57 @@
             this.gridPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPanel.Size = new System.Drawing.Size(786, 340);
             this.gridPanel.TabIndex = 0;
+            // 
+            // tabLogs
+            // 
+            this.tabLogs.ImageKey = "log.png";
+            this.tabLogs.Location = new System.Drawing.Point(4, 39);
+            this.tabLogs.Name = "tabLogs";
+            this.tabLogs.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLogs.Size = new System.Drawing.Size(786, 340);
+            this.tabLogs.TabIndex = 1;
+            this.tabLogs.Text = "View game logs";
+            this.tabLogs.UseVisualStyleBackColor = true;
+            // 
+            // tabHumanStats
+            // 
+            this.tabHumanStats.ImageKey = "soccer-player.png";
+            this.tabHumanStats.Location = new System.Drawing.Point(4, 39);
+            this.tabHumanStats.Name = "tabHumanStats";
+            this.tabHumanStats.Size = new System.Drawing.Size(786, 340);
+            this.tabHumanStats.TabIndex = 2;
+            this.tabHumanStats.Text = "View human stats";
+            this.tabHumanStats.UseVisualStyleBackColor = true;
+            // 
+            // tabSaveGame
+            // 
+            this.tabSaveGame.ImageKey = "file.png";
+            this.tabSaveGame.Location = new System.Drawing.Point(4, 39);
+            this.tabSaveGame.Name = "tabSaveGame";
+            this.tabSaveGame.Size = new System.Drawing.Size(786, 340);
+            this.tabSaveGame.TabIndex = 3;
+            this.tabSaveGame.Text = "Save game to file";
+            this.tabSaveGame.UseVisualStyleBackColor = true;
+            // 
+            // tabLoadGame
+            // 
+            this.tabLoadGame.ImageKey = "next.png";
+            this.tabLoadGame.Location = new System.Drawing.Point(4, 39);
+            this.tabLoadGame.Name = "tabLoadGame";
+            this.tabLoadGame.Size = new System.Drawing.Size(786, 340);
+            this.tabLoadGame.TabIndex = 4;
+            this.tabLoadGame.Text = "Load game";
+            this.tabLoadGame.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "game-development.png");
+            this.imageList1.Images.SetKeyName(1, "log.png");
+            this.imageList1.Images.SetKeyName(2, "next.png");
+            this.imageList1.Images.SetKeyName(3, "file.png");
+            this.imageList1.Images.SetKeyName(4, "soccer-player.png");
             // 
             // Game
             // 
@@ -125,5 +164,8 @@
         private System.Windows.Forms.TabPage tabLogs;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TableLayoutPanel gridPanel;
+        private System.Windows.Forms.TabPage tabHumanStats;
+        private System.Windows.Forms.TabPage tabSaveGame;
+        private System.Windows.Forms.TabPage tabLoadGame;
     }
 }

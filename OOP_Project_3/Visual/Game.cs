@@ -9,11 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 
-namespace OOP_Project_3.Visual
-{
-    public partial class Game : MaterialForm
-    {
-        public Game() => InitializeComponent();
-        public TableLayoutPanel GetGrid() => gridPanel;
-    }
+namespace OOP_Project_3.Visual {
+  public partial class Game : MaterialForm {
+    public Game() => InitializeComponent();
+    public TableLayoutPanel GetGrid() => gridPanel;
+  }
 }
