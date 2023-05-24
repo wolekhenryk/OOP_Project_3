@@ -53,10 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Entities\Animal.cs" />
+    <Compile Include="Core\Entities\Animals\Fox.cs" />
+    <Compile Include="Core\Entities\Animals\Gazelle.cs" />
     <Compile Include="Core\Entities\Animals\Sheep.cs" />
+    <Compile Include="Core\Entities\Animals\Tortoise.cs" />
     <Compile Include="Core\Entities\Animals\Wolf.cs" />
     <Compile Include="Core\Entities\Organism.cs" />
     <Compile Include="Core\GameHandler.cs" />
+    <Compile Include="Core\OrganismFactory.cs" />
     <Compile Include="Core\Values.cs" />
     <Compile Include="Core\VisualFormManager.cs" />
     <Compile Include="Core\World.cs" />

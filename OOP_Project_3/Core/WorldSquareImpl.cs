@@ -39,7 +39,7 @@ namespace OOP_Project_3.Core {
     private void PlaceEmptyButtons() {
       for (var i = 0; i < tableLayoutPanel.RowCount; i++) {
         for (var j = 0; j < tableLayoutPanel.ColumnCount; j++) {
-          var btn = new Button() {
+          var btn = new Button {
             Width = Values.CELL_SIZE,
             Height = Values.CELL_SIZE,
             Margin = Padding.Empty,
@@ -72,7 +72,7 @@ namespace OOP_Project_3.Core {
     }
     public override void Display() {
       ResetBoardState();
-      foreach (var organism in OrganismsReadOnly) organism.Display();
+      foreach (var organism in Organisms) organism.Display();
     }
 
     public Control ControlAtPosition((int, int)position) {
@@ -90,11 +90,12 @@ namespace OOP_Project_3.Core {
       return default;
     }
 
-    public override ValueTuple<int, int> NextMove((int, int)currentPosition) {
+    public override ValueTuple<int, int> NextMove((int, int)currentPosition, int factor = 1) {
       var (i, j) = currentPosition;
       for (var index = 0; index < Values.SQUARE_ATTEMPTS; index++) {
         var moveIndex = randomGenerator.Next(Values.SQUARE_MOVES);
-        var newPosition = (i + Values.SquareDy[moveIndex], j + Values.SquareDx[moveIndex]);
+        var newPosition =
+            (i + Values.SquareDy[moveIndex] * factor, j + Values.SquareDx[moveIndex] * factor);
         if (ValidCoords(newPosition))
           return newPosition;
       }

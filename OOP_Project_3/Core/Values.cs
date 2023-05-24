@@ -24,5 +24,18 @@ namespace OOP_Project_3.Core {
     public const int SHEEP_STRENGTH = 4;
     public const int SHEEP_INITIATIVE = 4;
     public const string SHEEP_TEXT = "\uD83D\uDC11";
+
+    public const int FOX_STRENGTH = 3;
+    public const int FOX_INITIATIVE = 7;
+    public const string FOX_TEXT = "\uD83E\uDD8A";
+
+    public const int TORTOISE_STRENGTH = 2;
+    public const int TORTOISE_INITIATIVE = 1;
+    public const int TORTOISE_MOVE_CHANCE = 2;
+    public const string TORTOISE_TEXT = "\ud83d\udc22";
+
+    public const int GAZELLE_STRENGTH = 4;
+    public const int GAZELLE_INITIATIVE = 4;
+    public const string GAZELLE_TEXT = "\uD83E\uDD8C";
   }
 }

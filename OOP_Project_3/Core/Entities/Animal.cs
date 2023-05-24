@@ -25,8 +25,21 @@ namespace OOP_Project_3.Core.Entities {
 
     public override void Display() {}
 
+    private bool SameSpecies(Animal other) => GetType().Name == other.GetType().Name;
+
+    private void Reproduce() {
+      WorldRef.Message($"{GetType().Name} reproducing");
+      var newPos = WorldRef.FindFreeSpot(Position);
+
+      if (newPos != (0, 0))
+        WorldRef.AddOrganism(OrganismFactory.Create(GetType(), newPos, WorldRef));
+    }
     public override void Collision(Organism other) {
-      if (other is Animal animal)
+      if (other is not Animal animal)
+        return;
+      if (SameSpecies(animal))
+        Reproduce();
+      else
         Fight(animal);
     }
 
@@ -36,12 +49,14 @@ namespace OOP_Project_3.Core.Entities {
         case < 0:
           Die();
           other.Position = Position;
-          WorldRef.Message($"{other.GetType().Name} mercilessly murdered {GetType().Name}");
+          WorldRef.Message(
+              $"{other.GetType().Name} mercilessly murdered {GetType().Name} at [{Position.Item1}, {Position.Item2}]");
           break;
         case > 0:
           other.Die();
           Position = other.Position;
-          WorldRef.Message($"{GetType().Name} mercilessly murdered {other.GetType().Name}");
+          WorldRef.Message(
+              $"{GetType().Name} mercilessly murdered {other.GetType().Name} at [{other.Position.Item1}, {other.Position.Item2}]");
           break;
       }
     }

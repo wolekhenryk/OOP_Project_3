@@ -34,12 +34,14 @@
             this.tabPlay = new System.Windows.Forms.TabPage();
             this.gridPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tabLogs = new System.Windows.Forms.TabPage();
+            this.logTextBox = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.tabHumanStats = new System.Windows.Forms.TabPage();
             this.tabSaveGame = new System.Windows.Forms.TabPage();
             this.tabLoadGame = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabControl.SuspendLayout();
             this.tabPlay.SuspendLayout();
+            this.tabLogs.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -91,6 +93,7 @@
             // 
             // tabLogs
             // 
+            this.tabLogs.Controls.Add(this.logTextBox);
             this.tabLogs.ImageKey = "log.png";
             this.tabLogs.Location = new System.Drawing.Point(4, 39);
             this.tabLogs.Name = "tabLogs";
@@ -99,6 +102,22 @@
             this.tabLogs.TabIndex = 1;
             this.tabLogs.Text = "View game logs";
             this.tabLogs.UseVisualStyleBackColor = true;
+            // 
+            // logTextBox
+            // 
+            this.logTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.logTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.logTextBox.Depth = 0;
+            this.logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logTextBox.Font = new System.Drawing.Font("Fira Code SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.logTextBox.Location = new System.Drawing.Point(3, 3);
+            this.logTextBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.logTextBox.Name = "logTextBox";
+            this.logTextBox.ReadOnly = true;
+            this.logTextBox.Size = new System.Drawing.Size(780, 334);
+            this.logTextBox.TabIndex = 0;
+            this.logTextBox.Text = "";
             // 
             // tabHumanStats
             // 
@@ -153,6 +172,7 @@
             this.Text = "Game";
             this.tabControl.ResumeLayout(false);
             this.tabPlay.ResumeLayout(false);
+            this.tabLogs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -167,5 +187,6 @@
         private System.Windows.Forms.TabPage tabHumanStats;
         private System.Windows.Forms.TabPage tabSaveGame;
         private System.Windows.Forms.TabPage tabLoadGame;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox logTextBox;
     }
 }
