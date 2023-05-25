@@ -55,7 +55,6 @@
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ImageList = this.imageList1;
             this.tabControl.Location = new System.Drawing.Point(3, 64);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
@@ -70,6 +69,7 @@
             this.tabPlay.Location = new System.Drawing.Point(4, 39);
             this.tabPlay.Margin = new System.Windows.Forms.Padding(0);
             this.tabPlay.Name = "tabPlay";
+            this.tabPlay.Padding = new System.Windows.Forms.Padding(6);
             this.tabPlay.Size = new System.Drawing.Size(786, 340);
             this.tabPlay.TabIndex = 0;
             this.tabPlay.Text = "Play the game";
@@ -77,18 +77,16 @@
             // 
             // gridPanel
             // 
-            this.gridPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.gridPanel.ColumnCount = 2;
             this.gridPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridPanel.Location = new System.Drawing.Point(0, 0);
-            this.gridPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.gridPanel.Location = new System.Drawing.Point(6, 6);
             this.gridPanel.Name = "gridPanel";
             this.gridPanel.RowCount = 2;
             this.gridPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.gridPanel.Size = new System.Drawing.Size(786, 340);
+            this.gridPanel.Size = new System.Drawing.Size(774, 328);
             this.gridPanel.TabIndex = 0;
             // 
             // tabLogs

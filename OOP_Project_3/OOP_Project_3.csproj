@@ -23,6 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -53,12 +55,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Entities\Animal.cs" />
+    <Compile Include="Core\Entities\Animals\CyberSheep.cs" />
     <Compile Include="Core\Entities\Animals\Fox.cs" />
     <Compile Include="Core\Entities\Animals\Gazelle.cs" />
     <Compile Include="Core\Entities\Animals\Sheep.cs" />
     <Compile Include="Core\Entities\Animals\Tortoise.cs" />
     <Compile Include="Core\Entities\Animals\Wolf.cs" />
     <Compile Include="Core\Entities\Organism.cs" />
+    <Compile Include="Core\Entities\Plant.cs" />
+    <Compile Include="Core\Entities\Plants\Sosnowski.cs" />
+    <Compile Include="Core\Entities\Plants\Grass.cs" />
+    <Compile Include="Core\Entities\Plants\Guarana.cs" />
+    <Compile Include="Core\Entities\Plants\Mlecz.cs" />
+    <Compile Include="Core\Entities\Plants\WilczaJagoda.cs" />
     <Compile Include="Core\GameHandler.cs" />
     <Compile Include="Core\OrganismFactory.cs" />
     <Compile Include="Core\Values.cs" />

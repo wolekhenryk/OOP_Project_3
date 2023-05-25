@@ -1,38 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using OOP_Project_3.Core.Entities.Animals;
+using OOP_Project_3.Core.Entities.Plants;
 
-namespace OOP_Project_3.Core {
-  internal class GameHandler {
-    private readonly World world;
-    private readonly Action mainAction;
-    public GameHandler(World world, Action action) {
-      this.world = world;
-      mainAction = action;
-    }
+namespace OOP_Project_3.Core;
 
-    public void Run() {
-      world.GameForm.Size =
-          new Size(Values.CELL_SIZE * (world.GetWidth() + 1) + 7 + world.GetWidth(),
-                   Values.CELL_SIZE * (world.GetHeight() + 1) + 8 + world.GetHeight());
+internal class GameHandler {
+  private readonly World world;
+  private readonly Action mainAction;
+  public GameHandler(World world, Action action) {
+    this.world = world;
+    mainAction = action;
+  }
 
-      world.GameForm.MouseClick += (_, _) => world.MakeTurn();
+  public void Run() {
+    world.GameForm.Size =
+        new Size(Values.CELL_SIZE * (world.GetWidth() + 2) + 7 + world.GetWidth(),
+                 Values.CELL_SIZE * (world.GetHeight() + 2) + 9 + world.GetHeight());
 
-      world.AddOrganism(OrganismFactory.Create(typeof(Wolf), (0, 1), world));
-      world.AddOrganism(OrganismFactory.Create(typeof(Wolf), (1, 0), world));
-      world.AddOrganism(OrganismFactory.Create(typeof(Wolf), (2, 1), world));
-      world.AddOrganism(OrganismFactory.Create(typeof(Fox), (1, 1), world));
+    world.PlaceOrganism(typeof(Sheep));
+    world.PlaceOrganism(typeof(Gazelle));
+    world.PlaceOrganism(typeof(Fox));
+    world.PlaceOrganism(typeof(Wolf));
+    world.PlaceOrganism(typeof(Tortoise));
 
-      world.Display();
-      world.ShowGameWindow();
-    }
+    world.PlaceOrganism(typeof(Grass));
+    world.PlaceOrganism(typeof(Mlecz));
+    world.PlaceOrganism(typeof(Guarana));
+    world.PlaceOrganism(typeof(Guarana));
+    world.PlaceOrganism(typeof(WilczaJagoda));
+    world.PlaceOrganism(typeof(WilczaJagoda));
 
-    private void HandleEnterKeyDown(object sender, MouseEventArgs e) => mainAction?.Invoke();
+    world.PlaceOrganism(typeof(CyberSheep));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+    world.PlaceOrganism(typeof(Sosnowski));
+
+    world.Display();
+    world.ShowGameWindow();
   }
 }
